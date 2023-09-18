@@ -1,1 +1,19 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 ${{ github.repository }} 저장소가 실행기에 복제되었습니다."
+      - run: echo "🖥️ 이제 워크플로가 실행기에서 코드를 테스트할 준비가 되었습니다."
+      - 이름 : 저장소에 있는 파일 목록
+        실행: |
+          ${{ github.workspace }}
+      - 실행: echo "🍏 이 작업의 상태는 ${{ job.status }}입니다."
 
